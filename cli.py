@@ -16,15 +16,15 @@ def trade(
     price: float = None
 ):
     try:
-        # ✅ Basic validation
+        #Basic validation
         symbol, side, order_type, quantity, price = validate_inputs(
             symbol, side, order_type, quantity, price
         )
 
-        # ✅ Create client
+        #Create client
         client = get_client()
 
-        # 🔥 Advanced validation (NEW)
+        # Advanced validation (NEW)
         validate_trade_logic(client, symbol, side, order_type, quantity, price)
 
         # 📊 Print summary
